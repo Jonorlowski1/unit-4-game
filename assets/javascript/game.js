@@ -29,51 +29,68 @@
 
 // * Each crystal should have a random hidden value between 1 - 12. 
 
-wins = 0;
-losses = 0;
-currentPointsArray = [];
-
-$("#wins").text('Wins: ' + wins);
-$("#losses").text('Losses ' + losses);
-
-var goalPoints = Math.floor(Math.random() * 90 + 10);
-$("#goalPoints").text(goalPoints);
-
-currentPoints = 0;
-$("#currentPoints").text(currentPoints);
 
 // var randomCrystalNumber = Math.floor(Math.random() * 12 + 1);
 // console.log(randomCrystalNumber);
 
 // NEED FOUR CRYSTAL OBJECTS
+// resetGame();
 $(document).ready(function () {
+    wins = 0;
+    losses = 0;
     crystalNumberBlue = Math.floor(Math.random() * 12 + 1);
     crystalNumberGreen = Math.floor(Math.random() * 12 + 1);
     crystalNumberPurple = Math.floor(Math.random() * 12 + 1);
     crystalNumberRed = Math.floor(Math.random() * 12 + 1);
 
-    var blueCrystal = {
-        crystalNumberBlue
+    Math.floor(Math.random() * 12 + 1)
+
+    var crystalNumberArray = [crystalNumberBlue, crystalNumberGreen, crystalNumberPurple, crystalNumberRed];
+    console.log(crystalNumberArray);
+
+
+    $("#wins").text('Wins: ' + wins);
+    $("#losses").text('Losses ' + losses);
+
+    var goalPoints = Math.floor(Math.random() * 48);
+    $("#goalPoints").text(goalPoints);
+
+    currentPoints = 0;
+    $("#currentPoints").text(currentPoints);
+
+    for (i = 0; i < crystalNumberArray.length; i++) {
+        var crystalImg = $('.crystalImg');
+        crystalImg.attr('data-crystalvalue', crystalNumberArray[i]);
     }
-    console.log(blueCrystal);
+    console.log(crystalImg);
 
-    var greenCrystal = {
-        crystalNumberGreen
-    }
-    console.log(greenCrystal);
-
-    var purpleCrystal = {
-        crystalNumberPurple
-    }
-    console.log(purpleCrystal);
-
-    var redCrystal = {
-        crystalNumberRed
-    }
-    console.log(redCrystal);
-
-    $(".crystalBtn").on("click", function() {
-        console.log();
-
+    $(".crystalBtn").on('click', function () {
+        var crystalValue = $(this).attr('data-crystalvalue');
+        crystalValue = parseInt(crystalValue);
+        currentPoints += crystalValue;
+        console.log(crystalValue);
     });
+
+    if (currentPoints === goalPoints) {
+        resetGame();
+        wins++;
+    }
+    if (currentPoints > goalPoints) {
+        resetGame();
+        losses++
+    }
+
 });
+
+    // var blueCrystal = {
+    //     crystalNumberArray
+    // }
+    // var greenCrystal = {
+    //     crystalNumberGreen
+    // }
+    // var redCrystal = {
+    //     crystalNumberRed
+    // }
+    // var purpleCrystal = {
+    //     crystalNumberPurple
+    // }
