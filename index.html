@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="assets/javascript/game.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -17,56 +16,57 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <h1>Crystals Collector!</h1>
           </div>
           <div class="col-md-8">
           </div>
         </div>
-
+        
         <div class="row">
           <div class="col-md-6">
             <p>You will be given a random number at the start of the game.</p>
             <p>There four crystals below. By clicking on a crystal you will add a specific amount of points to
               your total score.</p>
-            <p>You win the game by matching your local score to a random number, you lose the game if your total
-              score goes above the random number.</p>
-            <p>The value of each crystal is hidden from you until you click on it.</p>
-            <p>Each time when the game starts, the game will change the values of each crystal.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-3-md">
-            <div id="goalPoints"></div>
-          </div>
-          <div class="col-1-md">
-            <div id="scoreboard">
-              <div id="wins"></div>
-              <div id="losses"></div>
+              <p>You win the game by matching your local score to a random number, you lose the game if your total
+                score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+              </div>
             </div>
+            
+            <div class="row">
+              <div class="col-md-3">
+                <div id="goalPoints"></div>
+              </div>
+              <div class="col-md-1">
+                <div id="scoreboard">
+                  <div id="wins"></div>
+                  <div id="losses"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <button class="btn"><img class="crystalImg" src="assets/images/Blue Crystal.jpg" alt="Blue Crystal"></button>
+                <button class="btn"><img class="crystalImg" src="assets/images/Green Crystal.jpg" alt="Green Crystal"></button>
+                <button class="btn"><img class="crystalImg" src="assets/images/Purple Crystal.jpg" alt="Purple Crystal"></button>
+                <button class="btn"><img class="crystalImg" src="assets/images/Red Crystal.jpg" alt="Red Crystal"></button>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <div id="totalScore"></div><br>
+                <div id="currentPoints"></div>
+              </div>
+            </div>
+            
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-5">
-            <img class="crystalImg" src="https://images-na.ssl-images-amazon.com/images/I/61DzstO1hJL._SY450_.jpg" alt="Blue Crystal">
-            <img class="crystalImg" src="https://images-na.ssl-images-amazon.com/images/I/6171vUCgyUL._SY355_.jpg" alt="Green Crystal">
-            <img class="crystalImg" src="https://images-na.ssl-images-amazon.com/images/I/61H8IsPaDNL._SY355_.jpg" alt="Purple Crystal">
-            <img class="crystalImg" src="https://images-na.ssl-images-amazon.com/images/I/61Ls5sXOvnL._SY450_.jpg" alt="Red Crystal">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div id="totalScore"></div><br>
-            <div id="currentPoints"></div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
-</body>
-
-</html>
+    </body>
+    <script src="assets/javascript/game.js"></script>
+    
+    </html>
