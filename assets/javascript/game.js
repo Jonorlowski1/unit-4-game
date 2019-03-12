@@ -29,5 +29,11 @@
 
 // * Each crystal should have a random hidden value between 1 - 12. 
 
+wins = 0;
+losses = 0;
+
+$("#wins").text('Wins: ' + wins);
+$("#losses").text('Losses ' + losses);
+
 var goalPoints = Math.floor(Math.random() * 90 + 10)
 $("#goalPoints").text(goalPoints);
