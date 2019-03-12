@@ -1,13 +1,13 @@
 // 3. Here's how the app works:
 
 //    * There will be four crystals displayed as buttons on the page.
-    // FOUR OBJECTS
+// FOUR OBJECTS
 
 //    * The player will be shown a random number at the start of the game.
-    //math.function display into $<div>
+//math.function display into $<div>
 
 //    * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-    //on.Click event 
+//on.Click event 
 
 //      * Your game will hide this amount until the player clicks a crystal.
 
@@ -31,9 +31,49 @@
 
 wins = 0;
 losses = 0;
+currentPointsArray = [];
 
 $("#wins").text('Wins: ' + wins);
 $("#losses").text('Losses ' + losses);
 
-var goalPoints = Math.floor(Math.random() * 90 + 10)
+var goalPoints = Math.floor(Math.random() * 90 + 10);
 $("#goalPoints").text(goalPoints);
+
+currentPoints = 0;
+$("#currentPoints").text(currentPoints);
+
+// var randomCrystalNumber = Math.floor(Math.random() * 12 + 1);
+// console.log(randomCrystalNumber);
+
+// NEED FOUR CRYSTAL OBJECTS
+$(document).ready(function () {
+    crystalNumberBlue = Math.floor(Math.random() * 12 + 1);
+    crystalNumberGreen = Math.floor(Math.random() * 12 + 1);
+    crystalNumberPurple = Math.floor(Math.random() * 12 + 1);
+    crystalNumberRed = Math.floor(Math.random() * 12 + 1);
+
+    var blueCrystal = {
+        crystalNumberBlue
+    }
+    console.log(blueCrystal);
+
+    var greenCrystal = {
+        crystalNumberGreen
+    }
+    console.log(greenCrystal);
+
+    var purpleCrystal = {
+        crystalNumberPurple
+    }
+    console.log(purpleCrystal);
+
+    var redCrystal = {
+        crystalNumberRed
+    }
+    console.log(redCrystal);
+
+    $(".crystalBtn").on("click", function() {
+        console.log();
+
+    });
+});
