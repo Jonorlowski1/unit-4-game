@@ -69,21 +69,22 @@ $(".crystalBtn").on('click', function () {
   currentPoints += crystalValue;
   $("#currentPoints").text(currentPoints);
 
+  if (currentPoints === goalPoints) {
+    // resetGame();
+    // wins++;
+    console.log('WIN');
+  }
+  if (currentPoints > goalPoints) {
+    // resetGame();
+    // losses++;
+    console.log('LOSE');
+  }
   console.log(crystalValue);
   console.log('Current Points: ' + currentPoints);
   console.log('Goal Points: ' + goalPoints);
 });
 
-console.log(goalPoints);
 
-if (currentPoints === goalPoints) {
-  resetGame();
-  wins++;
-}
-if (currentPoints > goalPoints) {
-  resetGame();
-  losses++;
-}
 
 function resetGame() {
   $(document).ready(function () {
@@ -102,6 +103,7 @@ function resetGame() {
 
     goalPoints = Math.floor(Math.random() * 48);
     $("#goalPoints").text(goalPoints);
+    console.log('GOAL POINTS: ' + goalPoints);
 
     currentPoints = 0;
     $('#currentPoints').text(currentPoints);
