@@ -100,7 +100,7 @@ function resetGame() {
     $("#wins").text('Wins: ' + wins);
     $("#losses").text('Losses ' + losses);
 
-    var goalPoints = Math.floor(Math.random() * 48);
+    goalPoints = Math.floor(Math.random() * 48);
     $("#goalPoints").text(goalPoints);
 
     currentPoints = 0;
