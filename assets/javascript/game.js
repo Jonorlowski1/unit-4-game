@@ -33,7 +33,6 @@
 // var randomCrystalNumber = Math.floor(Math.random() * 12 + 1);
 // console.log(randomCrystalNumber);
 
-// NEED FOUR CRYSTAL OBJECTS
 resetGame();
 // $(document).ready(function () {
 //   wins = 0;
@@ -55,7 +54,7 @@ resetGame();
 //   $("#goalPoints").text(goalPoints);
 
 //   currentPoints = 0;
-  
+
 //   for (i = 0; i < crystalNumberArray.length; i++) {
 //     var crystalNumber = i + 1;
 //     var crystalImg = $('#' + crystalNumber + '.crystalImg');
@@ -63,67 +62,55 @@ resetGame();
 //     console.log(crystalNumberArray[i]);
 //   }
 //   console.log(crystalImg);
-  
-  $(".crystalBtn").on('click', function () {
-    var crystalValue = $(this).find('img').attr('data-crystalvalue');
-    crystalValue = parseInt(crystalValue);
-    currentPoints += crystalValue;
-    $("#currentPoints").text(currentPoints);
-    
-    console.log(crystalValue);
+
+$(".crystalBtn").on('click', function () {
+  var crystalValue = $(this).find('img').attr('data-crystalvalue');
+  crystalValue = parseInt(crystalValue);
+  currentPoints += crystalValue;
+  $("#currentPoints").text(currentPoints);
+
+  console.log(crystalValue);
+  console.log('Current Points: ' + currentPoints);
+  console.log('Goal Points: ' + goalPoints);
+});
+
+console.log(goalPoints);
+
+if (currentPoints === goalPoints) {
+  resetGame();
+  wins++;
+}
+if (currentPoints > goalPoints) {
+  resetGame();
+  losses++;
+}
+
+function resetGame() {
+  $(document).ready(function () {
+    wins = 0;
+    losses = 0;
+    crystalNumberBlue = Math.floor(Math.random() * 12 + 1);
+    crystalNumberGreen = Math.floor(Math.random() * 12 + 1);
+    crystalNumberPurple = Math.floor(Math.random() * 12 + 1);
+    crystalNumberRed = Math.floor(Math.random() * 12 + 1);
+
+    var crystalNumberArray = [crystalNumberBlue, crystalNumberGreen, crystalNumberPurple, crystalNumberRed];
+    console.log(crystalNumberArray);
+
+    $("#wins").text('Wins: ' + wins);
+    $("#losses").text('Losses ' + losses);
+
+    var goalPoints = Math.floor(Math.random() * 48);
+    $("#goalPoints").text(goalPoints);
+
+    currentPoints = 0;
+    $('#currentPoints').text(currentPoints);
+
+    for (i = 0; i < crystalNumberArray.length; i++) {
+      var crystalNumber = i + 1;
+      var crystalImg = $('#' + crystalNumber + '.crystalImg');
+      crystalImg.attr('data-crystalvalue', crystalNumberArray[i]);
+      console.log(crystalNumberArray[i]);
+    }
   });
-
-  if (currentPoints === goalPoints) {
-    resetGame();
-    wins++;
-  }
-  if (currentPoints > goalPoints) {
-    resetGame();
-    losses++
-  }
-
-  function resetGame() {
-    $(document).ready(function () {
-      wins = 0;
-      losses = 0;
-      crystalNumberBlue = Math.floor(Math.random() * 12 + 1);
-      crystalNumberGreen = Math.floor(Math.random() * 12 + 1);
-      crystalNumberPurple = Math.floor(Math.random() * 12 + 1);
-      crystalNumberRed = Math.floor(Math.random() * 12 + 1);
-    
-    
-      var crystalNumberArray = [crystalNumberBlue, crystalNumberGreen, crystalNumberPurple, crystalNumberRed];
-      console.log(crystalNumberArray);
-    
-    
-      $("#wins").text('Wins: ' + wins);
-      $("#losses").text('Losses ' + losses);
-    
-      var goalPoints = Math.floor(Math.random() * 48);
-      $("#goalPoints").text(goalPoints);
-    
-      currentPoints = 0;
-      
-      for (i = 0; i < crystalNumberArray.length; i++) {
-        var crystalNumber = i + 1;
-        var crystalImg = $('#' + crystalNumber + '.crystalImg');
-        crystalImg.attr('data-crystalvalue', crystalNumberArray[i]);
-        console.log(crystalNumberArray[i]);
-      }
-      console.log(crystalImg);
-    
-    });
 };
-
-    // var blueCrystal = {
-    //     crystalNumberArray
-    // }
-    // var greenCrystal = {
-    //     crystalNumberGreen
-    // }
-    // var redCrystal = {
-    //     crystalNumberRed
-    // }
-    // var purpleCrystal = {
-    //     crystalNumberPurple
-    // }
