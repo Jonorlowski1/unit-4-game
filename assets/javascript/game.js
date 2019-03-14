@@ -28,7 +28,6 @@ function resetGame() {
     crystalNumberRed = Math.floor(Math.random() * 12 + 1);
 
     var crystalNumberArray = [crystalNumberBlue, crystalNumberGreen, crystalNumberPurple, crystalNumberRed];
-    // console.log(crystalNumberArray);
 
     if (currentPoints === goalPoints) {
       wins = wins + 1;
@@ -43,7 +42,6 @@ function resetGame() {
 
     goalPoints = Math.floor(Math.random() * 100 + 19);
     $("#goalPoints").text(goalPoints);
-    // console.log('GOAL POINTS: ' + goalPoints);
 
     currentPoints = 0;
     $('#currentPoints').text(currentPoints);
