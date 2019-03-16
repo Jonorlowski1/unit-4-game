@@ -3,10 +3,8 @@ body {
 }
 
 #CrystalsHeader {
-    background-color: aqua;
     text-align: center;
     height: 100%;
-    border: 5px solid fuchsia;
 }
 
 #CrystalsHeader, #totalScore, #wins, #losses {
@@ -21,11 +19,10 @@ p {
     width: 40px;
 }
 
-.col-md-3,
-.col-md-6 {
-    padding: 0;
+#CrystalsHeaderContainer {
+    background-color: aqua;
+    border: 5px solid fuchsia;
 }
-
 
 #goalPoints {
     background-color: fuchsia;
