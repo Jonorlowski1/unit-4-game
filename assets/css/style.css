@@ -6,6 +6,7 @@ body {
     background-color: aqua;
     text-align: center;
     height: 100%;
+    border: 5px solid fuchsia;
 }
 
 #CrystalsHeader, #totalScore, #wins, #losses {
@@ -24,12 +25,14 @@ p {
     padding: 0;
 }
 
+
 #goalPoints {
-    background-color: aqua;
+    background-color: fuchsia;
     height: 100%;
     text-align: center;
     font-size: 50px;
     padding-top: 35px;
+    border: 10px solid aqua;
 }
 
 #text-container {
@@ -39,8 +42,9 @@ p {
 #currentPoints {
     height: 90%;
     text-align: center;
-    font-size: 30px;
-    padding-top: 40px;
+    font-size: 50px;
+    padding-top: 20px;
+    border: 5px dashed fuchsia;
 }
 
 #totalScore {
@@ -49,16 +53,20 @@ p {
 }
 
 #totalScore, #currentPoints {
-    background-color: aquamarine;
+    background-color: aqua;
+    text-align: center;
 }
 
 #scoreboard {
-    background-color: lightgrey;
+    background-color: fuchsia;
     text-align: center;
     font-size: 20px;
     padding: 40px 0;
+    /* margin-left: 80px; */
+    width: 225px;
+    border: 10px solid aqua;
 }
 
-#wins {
-    padding-bottom: 10px;
+.btn-container {
+    text-align: center;
 }
