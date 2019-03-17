@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   resetGame();
   wins = 0;
   losses = 0;

@@ -56,6 +56,9 @@ p {
 #totalScore, #currentPoints {
     background-color: aqua;
     text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #scoreboard {
