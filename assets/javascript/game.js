@@ -1,4 +1,8 @@
-resetGame();
+window.onload = function() {
+  resetGame();
+  wins = 0;
+  losses = 0;
+}
 
 $(".crystalBtn").on('click', function () {
   var crystalValue = $(this).find('img').attr('data-crystalvalue');
@@ -17,8 +21,6 @@ $(".crystalBtn").on('click', function () {
   console.log('Goal Points: ' + goalPoints);
 });
 
-wins = 0;
-losses = 0;
 
 function resetGame() {
   $(document).ready(function () {

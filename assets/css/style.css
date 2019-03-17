@@ -14,6 +14,10 @@ p {
     font-family: 'Play', sans-serif;
 }
 
+#gap {
+    margin-top: -5px;
+}
+
 .crystalImg {
     height: auto;
     width: 40px;
